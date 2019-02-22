@@ -81,6 +81,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        startLockTask();
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -532,7 +534,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 CameraPosition cameraPosition = new CameraPosition.Builder()
                         .target(new LatLng(location.getLatitude(),location.getLongitude()))
-                        .bearing(location.getBearing())
+                        .bearing(location.getBearing()-96)
                         .tilt(30)
                         // .bearing(bea)
                         .zoom(mMap.getCameraPosition().zoom)
@@ -617,3 +619,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 }
+

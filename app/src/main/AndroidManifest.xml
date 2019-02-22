@@ -33,7 +33,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBzdCF5xkMYsTlX9hAmhIA856YggdC3xs0" />
 
-        <activitygit
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
@@ -43,7 +43,7 @@
 
             </intent-filter>
 
-        </activitygit>
+        </activity>
     </application>
 
 </manifest>
